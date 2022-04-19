@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment-3</title>
+</head>
+
+<body>
+
+    <p>Click the below button </p>
+
+    <button onclick="myName()">Click Me</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myName() {
+            var person = prompt("Please enter your name: ");
+            document.getElementById("demo").innerHTML = "Hello " + person + "! Welcome to the World of Javascript";
+        }
+    </script>
+
+</body>
+
+</html>

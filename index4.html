@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment-4</title>
+    <style>
+        #demo {
+           
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Changing div color </h1>
+    <input type="text" id="colorInputText" placeholder="color-name">
+
+    <input type="button" id="colorButton" value="Click Me" onclick="changeColor()"><br><br>
+
+    <div id="demo">
+        <em></em>
+    </div>
+
+
+    <script>
+        function changeColor() {
+            var color = document.getElementById("colorInputText").value;
+            document.getElementById("demo").style.backgroundColor = color;
+
+        }
+    </script>
+
+</body>
+
+</html>

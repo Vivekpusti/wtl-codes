@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment-5</title>
+</head>
+
+<body>
+    <h1>Color Changing Page</h1>
+    <p>Click the button below to change the background color</p>
+    <button onclick="changeColor()">Click Me</button>
+</body>
+
+
+
+    <script>
+        var place = 0;
+        function changeColor() {
+            // self made color list
+            var colorList = ["red", "green", "blue", "yellow", "orange", "brown", "purple", "darkcyan", "gold", "blueviolet"];
+            // set the color
+            place = Math.floor(Math.random() * 10);
+            document.body.style.backgroundColor = colorList[place];
+        }
+    </script>
+
+
+</html>
