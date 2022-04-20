@@ -1,0 +1,33 @@
+Take firstname and lastname from your and Print that below button after “Your Full Name is”
+<!doctype html>
+<html>
+<head>
+<script>
+var firstName, lastName, res, temp;
+function fun()
+{
+  firstName = parseInt(document.getElementById("one").value);
+  lastName = parseInt(document.getElementById("two").value);
+  if(firstName && LastName)
+  {
+    temp = document.getElementById("res");
+    temp.style.display = "block";
+    res = firstName + lastName;
+    document.getElementById("add").value = res;
+    
+  }
+}
+</script>
+</head>
+<body>
+
+<p id="input">Enter First Name: <input id="one">
+<br/><br/>
+Enter Last Name: <input id="two"></p>
+<p><button onclick="fun()">Add</button></p>
+<p id="res" style="display:none;">
+Addition Result = <input id="add"><br/><br/></p>
+
+
+</body>
+</html>
