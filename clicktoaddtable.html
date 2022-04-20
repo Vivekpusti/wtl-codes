@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <title>Document</title>
+    </head>
+
+<body>  
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        </style>
+            <table id="t1">
+                
+                <tr>
+                    <td>A</td>
+                    <td>html</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>php</td>
+                    <td>30</td>
+                </tr>
+            </table>
+      <br></br>
+        <input type="button" value="click" onclick="fun1()"></input>
+    
+</body>
+<script>
+    function fun1() {
+        let x = document.getElementById("t1");
+
+     
+        let tr1=document.createElement("tr");
+        let td1=document.createElement("td"); 
+        let td2 = document.createElement("td"); 
+        let td3 = document.createElement("td"); 
+
+        let txtNode1 = document.createTextNode('C');
+        let txtNode2 = document.createTextNode('web');
+        let txtNode3 = document.createTextNode('50');
+
+        tr1.appendChild(td1);
+        tr1.appendChild(td2);
+        tr1.appendChild(td3);
+
+        td1.appendChild(txtNode1)
+        td2.appendChild(txtNode2)
+        td3.appendChild(txtNode3)
+
+        x.appendChild(tr1)
+    }
+</script>
+
+</html>
