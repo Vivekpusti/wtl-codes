@@ -8,8 +8,7 @@
     <title>Experiment-4</title>
     <style>
         #demo {
-           
-            background-color: aqua;
+            padding: 3% 0% 3%;
         }
     </style>
 </head>
@@ -20,16 +19,12 @@
 
     <input type="button" id="colorButton" value="Click Me" onclick="changeColor()"><br><br>
 
-    <div id="demo">
-        <em></em>
-    </div>
-
-
+    <div id="demo"><em></em></div>
     <script>
         function changeColor() {
             var color = document.getElementById("colorInputText").value;
             document.getElementById("demo").style.backgroundColor = color;
-
+            document.getElementById("demo").innerHTML = "This is a div tag";
         }
     </script>
 
