@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Colour Change</title>
+
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            #div-background-change {
+                height: fit-content;
+                width: fit-content;
+                margin: 100px auto;
+                padding: 20px;
+            }
+
+            #div-color-change {
+                height: 500px;
+                width: 500px;
+                margin: 100px auto;
+                text-align: center;
+            }
+
+            #div-certain-p-color {
+                position: relative;
+                top: -150px;
+                height: fit-content;
+                width: fit-content;
+                margin: auto;
+                padding: 20px 300px;
+                text-align: center;
+            }
+
+            .p-color {
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="div-background-change">
+            <p>Change the background color: <br></p>
+            <input type="radio" name="background-color" id="bgcolor-rb-red" value="red" onchange="document.body.style.backgroundColor = 'red';"><label for="bgcolor-rb-red"> Red</label>
+            <input type="radio" name="background-color" id="bgcolor-rb-yellow" value="yellow" onchange="document.body.style.backgroundColor = 'yellow';"><label for="bgcolor-rb-yellow"> Yellow</label>
+            <input type="radio" name="background-color" id="bgcolor-rb-blue" value="blue" onchange="document.body.style.backgroundColor = 'blue';"><label for="bgcolor-rb-blue"> Blue</label>
+        </div>
+
+        <div id="div-color-change">
+            <p>Change the background of this div: <br></p>
+            <input type="radio" name="div-color" id="divcolor-rb-cyan" onchange="document.getElementById('div-color-change').style.backgroundColor = 'cyan';"><label for="divcolor-rb-cyan"> Cyan</label>
+            <input type="radio" name="div-color" id="divcolor-rb-purple" onchange="document.getElementById('div-color-change').style.backgroundColor = 'purple';"><label for="divcolor-rb-purple"> Purple</label>
+            <input type="radio" name="div-color" id="divcolor-rb-green" onchange="document.getElementById('div-color-change').style.backgroundColor = 'green';"><label for="divcolor-rb-green"> Green</label>
+        </div>
+
+        <div id="div-certain-p-color">
+            <p class="p-color" id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro iusto magnam nesciunt quod excepturi sapiente maxime, at vero. Rem odio officiis fugiat id fuga nemo corporis inventore eos ipsam alias?</p>
+            <p class="p-color" id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro iusto magnam nesciunt quod excepturi sapiente maxime, at vero. Rem odio officiis fugiat id fuga nemo corporis inventore eos ipsam alias?</p>
+            <p class="p-color" id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro iusto magnam nesciunt quod excepturi sapiente maxime, at vero. Rem odio officiis fugiat id fuga nemo corporis inventore eos ipsam alias?</p>
+            <p class="p-color" id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro iusto magnam nesciunt quod excepturi sapiente maxime, at vero. Rem odio officiis fugiat id fuga nemo corporis inventore eos ipsam alias?</p>
+            <p class="p-color" id="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro iusto magnam nesciunt quod excepturi sapiente maxime, at vero. Rem odio officiis fugiat id fuga nemo corporis inventore eos ipsam alias?</p>
+            <input type="button" value="Change Color" onclick="changePBgColor()">
+        </div>
+        
+        <script>
+            function changePBgColor() {
+                var paras = document.getElementsByClassName("p-color");
+                for (let i = 2; i < paras.length; i++) {
+                    paras[i].style.backgroundColor = "yellow";
+                }
+            }
+        </script>
+    </body>
+</html>
