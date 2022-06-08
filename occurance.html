@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <title>Write a JavaScript program to find the most frequent item of an array</title>
+</head>
+<body>
+    <script>
+        var arr1=['a', 'b', 'a', 'c', 'z'];
+var mf = 1;
+var m = 0;
+var item;
+for (var i=0; i<arr1.length; i++)
+{
+        for (var j=i; j<arr1.length; j++)
+        {
+                if (arr1[i] == arr1[j])
+                 m++;
+                if (mf<m)
+                {
+                  mf=m; 
+                  item = arr1[i];
+                }
+        }
+        m=0;
+}
+document.write(item+" ( " +mf +" times ) ") ;
+
+console.log(item+" ( " +mf +" times ) ") ;
+
+    </script>
+</body>
+</html>
